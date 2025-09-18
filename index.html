@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>UI Progress Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>UI Development Progress</h1>
+      <p class="subtitle">Progress on UI for Assignment 2</p>
+      <p class="student-info">Tingjia Yu S4060139</p>
+    </header>
+
+    <nav class="links">
+      <a href="#concept">Concept</a>
+      <a href="#implementation">Implementation</a>
+      <a href="#testing">User Testing</a>
+      <a href="#prototype">Prototype</a>
+    </nav>
+
+    <main>
+      <section id="concept">
+        <h2>Conceptual Response</h2>
+        <p>
+          My prototype is an interactive, memory–exploration website with five
+          scenes, each representing a different life stage. The entry state is
+          fully blurred; users can click to “erase” the blur and reveal the
+          clear background GIF, or press <em>Listen</em> to reveal everything
+          and start music.
+        </p>
+        <h3>References</h3>
+        <ul class="refs">
+          <li>
+            <a href="https://localtime.avantwhatever.com/" target="localtime">
+              Local Time
+            </a>
+            <p>
+              This website has given me the inspiration that a page can be
+              blurry at the beginning and then become clear after clicking a
+              button.
+            </p>
+          </li>
+          <li>
+            <a href="https://georgealways.com/archive/ce1k/?" target="1000">
+              Chrome Experiment #1000
+            </a>
+            <p>
+              This website gave me the idea of designing to erase the blur layer
+              after clicking on the page, adding some interactive designs to the
+              website.
+            </p>
+          </li>
+        </ul>
+        <div class="images-wide">
+          <img src="overall.JPG" alt="Overall concept sketch" />
+          <img src="introduction.JPG" alt="Introduction sketch" />
+          <img src="input idea.JPG" alt="Input idea sketch" />
+          <img src="wireframe.JPG" alt="Wireframe sketch" />
+        </div>
+      </section>
+
+      <section id="implementation">
+        <h2>Implementation</h2>
+        <p>
+          Built on the provided audio system using <strong>Tone.js</strong> for
+          sound. A top blur layer masks a background GIF; clicks add reveal
+          masks, while the <em>Listen</em> button clears the layer and starts
+          music. For the advanced technique, I’m using
+          <strong>Date.now()</strong>
+          to relate scene selection to time (e.g., year–memory mapping &
+          progress stamping).
+        </p>
+        <h3>System Map</h3>
+        <ul>
+          <li>User Input (click / Listen / year)</li>
+          <li>Blur Layer → updates reveal mask</li>
+          <li>Tone.js → sound effects / background music</li>
+          <li>Date.now() → time mapping & last-updated stamp</li>
+          <li>Output → Clear/blur visuals + audio feedback</li>
+        </ul>
+        <div class="images-wide">
+          <img src="system.png" alt="System map diagram" />
+        </div>
+      </section>
+
+      <section id="testing" class="center-text">
+        <h2>Peer User Testing</h2>
+        <p><strong>Prompts:</strong></p>
+        <ul>
+          <li>
+            1. Was it clear to you what actions (clicking the screen or pressing
+            the Listen button) would do on this site?
+          </li>
+          <li>
+            2. Did you find it easy to control the site and understand how to
+            move from the blurred state to the clear state?
+          </li>
+        </ul>
+        <p>
+          <strong>Reflection:</strong> Most users found the Listen button clear
+          and easy to use, but several did not realize that clicking on the
+          blurred screen could also reveal content and play audio. The year
+          dropdown and arrows were confusing, as testers expected clearer visual
+          changes when selecting them. A few also wondered if it was possible to
+          return to the blurred state. From this feedback, I learned that while
+          the core idea is engaging, I need to add clearer signifiers and
+          feedback—especially for the screen click and year navigation—to make
+          the interaction more understandable.
+        </p>
+      </section>
+
+      <section id="prototype" class="center-text">
+        <h2>Prototype Link</h2>
+        <p>
+          <a
+            class="proto-link"
+            href="https://charming-kleicha-5870b3.netlify.app/"
+            target="prototype"
+          >
+            Open prototype
+          </a>
+        </p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
