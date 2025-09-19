@@ -24,13 +24,15 @@
         <h2>Conceptual Response</h2>
         <p>
           My prototype is an interactive memory–exploration website with five
-          scenes, each representing a different stage of life. When the site
-          loads, the background GIFs are covered by a blur layer, suggesting
-          that memories are distant or unclear. Users can click on the screen to
-          erase parts of the blur and gradually reveal the image, or press the
-          large Listen button to clear the blur completely and start the music.
-          This design mirrors how memories often shift from vague to vivid, and
-          invites users to uncover them in both a playful and reflective way.
+          scenes, each tied to a different stage of life. On load, a blur layer
+          covers the background GIFs to suggest distant or unclear memories.
+          Users can click on the screen to erase parts of the blur and gradually
+          reveal the image, or press the large Listen button to clear everything
+          at once and start the music. This mirrors how memories shift from
+          vague to vivid, and turns the act of revealing into a personal,
+          playful interaction. By combining blurred visuals with sound, the
+          design encourages both curiosity and reflection, making the
+          exploration of memories feel active rather than passive.
         </p>
         <h3>References</h3>
         <ul class="refs">
@@ -39,9 +41,10 @@
               Local Time
             </a>
             <p>
-              This website has given me the inspiration that a page can be
-              blurry at the beginning and then become clear after clicking a
-              button.
+              This website has inspired me. A page can start blurry and then
+              become clear when a button is clicked. And it can generate
+              different web page styles based on the different locations where
+              users are.
             </p>
           </li>
           <li>
@@ -74,6 +77,14 @@
           to relate scene selection to time (e.g., year memory mapping &
           progress stamping).
         </p>
+        <p>
+          At first, I considered creating a mouse catcher–style effect (where
+          the blur dynamically follows the cursor), but I realized this was too
+          complex for my current skills. Instead, I simplified the interaction
+          to mouse clicks on the screen, which erase the blur in localized
+          spots. This still gives a strong sense of discovery and interaction,
+          while being more achievable within my technical ability.
+        </p>
         <h3>System Map</h3>
         <ul>
           <li>User Input (click / Listen / year)</li>
@@ -102,14 +113,20 @@
         </ul>
         <p>
           <strong>Reflection:</strong> Most users found the Listen button clear
-          and easy to use, but several did not realize that clicking on the
-          blurred screen could also reveal content and play audio. The year
-          dropdown and arrows were confusing, as testers expected clearer visual
-          changes when selecting them. A few also wondered if it was possible to
-          return to the blurred state. From this feedback, I learned that while
-          the core idea is engaging, I need to add clearer signifiers and
-          feedback—especially for the screen click and year navigation—to make
-          the interaction more understandable.
+          and easy to use, but many did not realize that clicking on the blurred
+          screen could also reveal content and play audio. The year dropdown and
+          arrows were confusing, as testers expected clearer visual changes when
+          selecting them. Some also wondered if it was possible to return the
+          screen to a blurred state.
+        </p>
+
+        <p>
+          From this feedback, I learned that while the concept is engaging, I
+          need to add stronger signifiers and feedback — especially for the
+          screen click and year navigation. In the next iteration, I plan to
+          make the clickable areas more obvious, refine the year selection so it
+          always triggers visible scene changes, and consider adding a “re-blur”
+          option so users feel more in control of switching states.
         </p>
       </section>
 
