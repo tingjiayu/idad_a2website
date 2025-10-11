@@ -8,19 +8,25 @@
   <body>
     <header>
       <h1>UI Development Progress</h1>
-      <p class="subtitle">Progress on UI for Assignment 2</p>
+      <p class="subtitle">Progress on UI</p>
       <p class="student-info">Tingjia Yu S4060139</p>
     </header>
 
     <nav class="links">
-      <a href="#concept">Concept</a>
-      <a href="#implementation">Implementation</a>
-      <a href="#testing">User Testing</a>
-      <a href="#prototype">Prototype</a>
+      <a href="https://charming-kleicha-5870b3.netlify.app/" target="a2"
+        >Assignment2</a
+      >
+      <a href="https://stalwart-sprinkles-e9e71c.netlify.app/" target="a3"
+        >Assignment3</a
+      >
+      <a href="https://github.com/tingjiayu/Assignment_3" target="netlify"
+        >Netlify Library</a
+      >
     </nav>
 
     <main>
       <section id="concept">
+        <h2>Process on Assignment 2</h2>
         <h2>Conceptual Response</h2>
         <p>
           My prototype is an interactive memory–exploration website with five
@@ -130,7 +136,7 @@
         </p>
       </section>
 
-      <section id="prototype" class="center-text">
+      <!-- <section id="prototype" class="center-text">
         <h2>Prototype Link</h2>
         <p>
           <a
@@ -141,8 +147,180 @@
             Open prototype
           </a>
         </p>
-      </section>
+      </section> -->
     </main>
+    <section id="reflection" class="prose">
+      <h2>Assignment 3: Reflection</h2>
+
+      <h3>Design Values</h3>
+      <p>
+        I focused on two values: <strong>immersion</strong> and
+        <strong>emotional connection</strong>. I wanted the site to be quiet and
+        reflective, almost like holding a small photo book. Blur stands for
+        distance; sound brings things back. Together, they create a soft rhythm.
+      </p>
+      <p>
+        These values guided actual choices: full-screen media, minimal UI text,
+        centered captions, and a clear Listen button. The goal was: less
+        reading, more feeling. Let the interaction explain itself.
+      </p>
+
+      <h3>Feedback, Information Design, Mapping, Learnability</h3>
+      <p>
+        Feedback is direct: moving the mouse reveals clarity; pressing “Listen”
+        makes the scene fully clear and starts BGM. The mapping is simple:
+        forward means later in time; backward means earlier. The hint “scroll”
+        word on the right side helps first-time users without being loud.
+      </p>
+      <p>
+        Information design stays light. The top bar shows time distance and
+        current time (when enabled). The caption at the bottom gives a short
+        line to suggest mood, not to explain everything. This keeps learnability
+        high: users can start exploring without instructions.
+      </p>
+      <p>
+        From peer feedback, I learned that people get lost if they don’t know
+        what to do at the start. So I added an intro page to set the tone and
+        tell users the two main actions: move to reveal, press Listen to recall.
+      </p>
+
+      <h3>Significant Changes Since the Progress Milestone</h3>
+      <p>
+        Compared to the prototype, I made three key changes to the UI structure
+        and concept:
+      </p>
+      <ul>
+        <li>
+          <strong>Vertical → Horizontal (Horizontal Scroll):</strong> users now
+          swipe sideways like turning a memory album; the storytelling feels
+          stronger.
+        </li>
+        <li>
+          <strong>Listen mode + automatic BGM switching:</strong> users press
+          Listen once, and each page plays its own audio as they move forward;
+          the experience is smoother.
+        </li>
+        <li>
+          <strong>Date.now() time linking:</strong> the current time is
+          connected to blur and audio parameters; the scene “breathes” slightly
+          so memories feel present.
+        </li>
+      </ul>
+
+      <p>
+        These changes improved consistency and clarity, and made the work fit
+        the theme of “time—memory—interaction” much better.
+        <figure class="comparison">
+          <img src="old.GIF" alt="Prototype version of Memory Carousel" />
+          <figcaption>Early prototype — vertical scrolling layout</figcaption>
+        </figure>
+
+        <figure class="comparison">
+          <img src="new.GIF" alt="Final version of Memory Carousel" />
+          <figcaption>
+            Final version — horizontal timeline with sound and blur interaction
+          </figcaption>
+        </figure>
+      </p>
+
+      <p>
+        <em>Impact:</em> Small decisions changed the overall experience a lot.
+        The horizontal flow feels more like moving through time. Auto BGM
+        switching keeps the journey continuous, so users don’t have to stop and
+        think. The time link is subtle, but it adds a sense that the page is
+        alive and connected to “now.” Altogether, the site feels more natural
+        and closer to the feeling of memory I wanted.
+      </p>
+
+      <h3>Timeline & Process</h3>
+      <p>
+        I started with the layout in HTML/CSS, then added scene data, then
+        interactions (scroll, reveal, Listen), and finally connected time with
+        Date.now() and sound with Tone.js. I tried values for blur (8–24px) and
+        audio filters until the pacing felt right.
+      </p>
+      <p>
+        A rough timeline: Week 6: layout + first scene; Week 7-8: five scenes +
+        captions; Week 9: Listen mode + audio chain; Week 10: horizontal scroll
+        + intro; Week 11: time linking + polish (centered captions, clearer
+        Listen, light “scroll” hint).
+      </p>
+      <p>
+        What helped me most was testing while building. Some choices only felt
+        right after trying them (for example, how fast the reveal should follow
+        the mouse, and how strong the blur should be on older scenes).
+      </p>
+
+      <h3>Most Proud Of</h3>
+      <p>
+        I’m proud of how blur and sound work together. Older scenes are more
+        blurred and muffled; newer ones are clearer and brighter. It feels
+        natural, like how memories work in your head. I also like that the
+        horizontal layout quietly supports the idea of time without needing
+        extra labels.
+      </p>
+      <p>
+        Another small win is the mouse “catcher” effect. It turns the reveal
+        into a playful action, not just a click, so users can “search” through
+        the memory.
+      </p>
+
+      <h3>Most Challenging</h3>
+      <p>
+        The hardest part was making everything connect smoothly. At first, music
+        didn’t switch when scrolling, and sometimes the blur layer disappeared.
+        I tried a few approaches and ended up resetting state per page and
+        switching BGM in Listen mode. Now the flow is better.
+      </p>
+      <p>
+        I also learned a lot from peer feedback. Some people felt the theme and
+        interaction weren’t clear enough at the start. So I added an
+        introduction page and changed the interaction from “tap to clear blur”
+        to a mouse catcher effect. It’s clearer, more playful, and less
+        repetitive.
+      </p>
+
+      <h3>Accessibility & Performance Notes</h3>
+      <p>
+        I tried to keep motion gentle and added reduced-motion support with CSS
+        when possible. For performance, I plan to replace large GIFs with WebM
+        videos to lower file size and improve playback. Images and audio are
+        preloaded per scene to avoid sudden gaps.
+      </p>
+      <p>
+        I also kept contrast reasonable on captions and buttons, and centered
+        the caption to match the top bar width, so the reading path feels stable
+        across scenes.
+      </p>
+
+      <h3>What I Learned</h3>
+      <ul>
+        <li>
+          Small interaction changes (like auto BGM switching) can change the
+          whole mood.
+        </li>
+        <li>
+          Mapping time to both blur and sound makes the concept easier to feel.
+        </li>
+        <li>
+          Testing with real users is important—intro and hints matter more than
+          I thought.
+        </li>
+        <li>
+          Keeping the UI quiet (less text, clearer actions) helps people focus
+          on the experience.
+        </li>
+      </ul>
+
+      <h3>Future Reflection</h3>
+      <p>
+        I want to add more personal-time features, like tinting the visuals
+        based on the current date, so each visit feels a bit different. I’ll
+        also switch big GIFs to WebM for smoother performance. Overall, I want
+        to keep building interactions that feel gentle and meaningful, not just
+        functional.
+      </p>
+    </section>
 
     <script src="script.js"></script>
   </body>

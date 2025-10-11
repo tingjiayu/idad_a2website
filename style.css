@@ -129,3 +129,73 @@ h2 {
 .proto-link:hover {
   background: #e6dcff;
 }
+
+.comparison img {
+  max-width: 90%;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.comparison figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* ===== Reflection Section: match overall layout ===== */
+#reflection {
+  margin: 3rem auto;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #f0dce2;
+}
+
+#reflection:last-of-type {
+  border-bottom: none;
+}
+
+#reflection h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+#reflection h3 {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: 600;
+}
+
+#reflection p {
+  margin: 0.6rem 0;
+  color: #333;
+  line-height: 1.7;
+}
+
+#reflection ul {
+  margin: 0.6rem 0 1rem 1.2rem;
+  padding-left: 0.5rem;
+}
+
+#reflection li {
+  margin-bottom: 0.4rem;
+  color: #333;
+}
+
+#reflection figure {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+#reflection img {
+  width: 90%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+#reflection figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
