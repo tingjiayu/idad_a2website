@@ -191,19 +191,35 @@
       </p>
       <ul>
         <li>
-          <strong>Vertical → Horizontal (Horizontal Scroll):</strong> users now
-          swipe sideways like turning a memory album; the storytelling feels
-          stronger.
+          <strong>Vertical → Horizontal (Horizontal Scroll):</strong>
+          Originally, the prototype used a vertical scroll, but it felt too
+          similar to a regular website. After feedback, I redesigned it as a
+          horizontal scroll, so users move sideways like turning pages in a
+          memory album. This change gave the whole project a stronger narrative
+          flow — every slide now feels like a separate moment in time. It also
+          made the transition between memories smoother, because the movement
+          across the screen visually echoes the idea of moving forward through
+          time.
         </li>
         <li>
-          <strong>Listen mode + automatic BGM switching:</strong> users press
-          Listen once, and each page plays its own audio as they move forward;
-          the experience is smoother.
+          <strong>Listen mode + automatic BGM switching:</strong> In the first
+          version, users had to manually click the Listen button every time they
+          entered a new scene, which interrupted the experience. I changed the
+          logic so that once Listen mode is activated, the background music
+          automatically switches for each scene as the user scrolls. This made
+          the project feel more continuous and immersive, like a single memory
+          unfolding. It also simplified interaction — users can now focus more
+          on the visuals and atmosphere instead of managing controls.
         </li>
         <li>
-          <strong>Date.now() time linking:</strong> the current time is
-          connected to blur and audio parameters; the scene “breathes” slightly
-          so memories feel present.
+          <strong>Date.now() time linking:</strong> I added a small but
+          meaningful technical feature using Date.now(). The current time of the
+          user’s system now influences both the blur strength and the audio
+          filter slightly. The site subtly “breathes” with the present moment —
+          for example, visiting it at different times of day makes the sound
+          tone and visual softness slightly different. It’s not something every
+          user will immediately notice, but it helps reinforce the theme that
+          memories are always connected to the present.
         </li>
       </ul>
 
@@ -253,31 +269,36 @@
 
       <h3>Most Proud Of</h3>
       <p>
-        I’m proud of how blur and sound work together. Older scenes are more
-        blurred and muffled; newer ones are clearer and brighter. It feels
-        natural, like how memories work in your head. I also like that the
-        horizontal layout quietly supports the idea of time without needing
-        extra labels.
+        I’m proud of how the blur and sound now work together to express memory.
+        Older scenes are more blurred and muffled, while newer ones are clearer
+        and brighter — it feels natural, like how memories fade and sharpen over
+        time. The horizontal layout also helps tell that story without needing
+        extra labels; it feels like turning pages in a photo book.
       </p>
       <p>
-        Another small win is the mouse “catcher” effect. It turns the reveal
-        into a playful action, not just a click, so users can “search” through
-        the memory.
+        I also like the new mouse “catcher” effect. It makes the reveal feel
+        more playful and interactive, as if you’re uncovering small pieces of
+        memory instead of just clicking a button. This small change made the
+        experience more engaging and expressive.
       </p>
 
       <h3>Most Challenging</h3>
       <p>
-        The hardest part was making everything connect smoothly. At first, music
-        didn’t switch when scrolling, and sometimes the blur layer disappeared.
-        I tried a few approaches and ended up resetting state per page and
-        switching BGM in Listen mode. Now the flow is better.
+        The hardest part was connecting everything so it felt smooth. Early on,
+        the music didn’t switch when scrolling, and sometimes the blur layer
+        disappeared. I had to adjust the logic so each page resets correctly and
+        plays its own BGM in Listen mode.
       </p>
       <p>
-        I also learned a lot from peer feedback. Some people felt the theme and
-        interaction weren’t clear enough at the start. So I added an
-        introduction page and changed the interaction from “tap to clear blur”
-        to a mouse catcher effect. It’s clearer, more playful, and less
-        repetitive.
+        Another challenge came from peer feedback. Some people said the
+        interaction wasn’t clear at first, so I added an introduction page and
+        changed the action from “tap to clear blur” to the mouse catcher effect.
+        It made the concept easier to understand and more fun to explore.
+      </p>
+      <p>
+        These fixes taught me that user testing really matters — what feels
+        obvious to me might not be obvious to others, and sometimes small
+        changes can completely improve the experience.
       </p>
 
       <h3>Accessibility & Performance Notes</h3>
